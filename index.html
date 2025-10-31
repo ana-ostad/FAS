@@ -1,1 +1,5409 @@
+<!DOCTYPE html>
 
+<html lang="ar" dir="rtl">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>المنصة التعليمية - طلبة المدارس العليا للأساتذة</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+
+    <style>
+
+        * {
+
+            margin: 0;
+
+            padding: 0;
+
+            box-sizing: border-box;
+
+            font-family: 'Tajawal', sans-serif;
+
+        }
+
+        
+
+        :root {
+
+            --primary: #2E7D32;
+
+            --primary-light: #4CAF50;
+
+            --primary-lighter: #C8E6C9;
+
+            --primary-dark: #1B5E20;
+
+            --secondary: #1565C0;
+
+            --white: #FFFFFF;
+
+            --light: #F5F9F5;
+
+            --text: #1B5E20;
+
+            --text-light: #4CAF50;
+
+            --accent: #FF9800;
+
+            --shadow: 0 5px 15px rgba(46, 125, 50, 0.15);
+
+            --shadow-hover: 0 10px 25px rgba(46, 125, 50, 0.25);
+
+            --transition: all 0.3s ease;
+
+            --border-radius: 16px;
+
+        }
+
+        
+
+        html, body {
+
+            width: 100%;
+
+            overflow-x: hidden;
+
+        }
+
+        
+
+        body {
+
+            background: linear-gradient(135deg, #f8fdf9 0%, #ffffff 100%);
+
+            color: var(--text);
+
+            line-height: 1.6;
+
+            min-height: 100vh;
+
+        }
+
+        
+
+        .container {
+
+            width: 100%;
+
+            max-width: 1400px;
+
+            margin: 0 auto;
+
+            padding: 15px;
+
+        }
+
+        
+
+        header {
+
+            background: var(--white);
+
+            padding: 15px 0;
+
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+
+            position: relative;
+
+            width: 100%;
+
+        }
+
+        
+
+        .header-content {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            flex-wrap: wrap;
+
+            gap: 15px;
+
+        }
+
+        
+
+        .logo {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+        }
+
+        
+
+        .logo-icon {
+
+            width: 50px;
+
+            height: 50px;
+
+            background: var(--primary);
+
+            border-radius: 12px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            color: var(--white);
+
+            font-size: 22px;
+
+            box-shadow: var(--shadow);
+
+            transition: var(--transition);
+
+        }
+
+        
+
+        .logo:hover .logo-icon {
+
+            transform: rotate(10deg) scale(1.05);
+
+        }
+
+        
+
+        .logo-text {
+
+            font-size: 20px;
+
+            font-weight: 800;
+
+            color: var(--primary);
+
+        }
+
+        
+
+        .logo-subtitle {
+
+            font-size: 14px;
+
+            color: var(--text-light);
+
+            margin-top: 3px;
+
+        }
+
+        
+
+        .user-actions {
+
+            display: flex;
+
+            gap: 10px;
+
+            align-items: center;
+
+        }
+
+        
+
+        .btn {
+
+            padding: 10px 18px;
+
+            border-radius: 25px;
+
+            font-weight: 700;
+
+            cursor: pointer;
+
+            transition: var(--transition);
+
+            text-decoration: none;
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            border: none;
+
+            font-size: 14px;
+
+        }
+
+        
+
+        .btn-primary {
+
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+
+            color: var(--white);
+
+            box-shadow: var(--shadow);
+
+        }
+
+        
+
+        .btn-primary:hover {
+
+            transform: translateY(-3px);
+
+            box-shadow: var(--shadow-hover);
+
+        }
+
+        
+
+        .btn-outline {
+
+            background: transparent;
+
+            color: var(--primary);
+
+            border: 2px solid var(--primary);
+
+        }
+
+        
+
+        .btn-outline:hover {
+
+            background: var(--primary);
+
+            color: var(--white);
+
+        }
+
+        
+
+        .main-content {
+
+            padding: 20px 0;
+
+            width: 100%;
+
+        }
+
+        
+
+        .hero {
+
+            text-align: center;
+
+            margin-bottom: 40px;
+
+            padding: 30px 15px;
+
+            background: linear-gradient(135deg, rgba(76, 175, 80, 0.1) 0%, rgba(255, 255, 255, 0.8) 100%);
+
+            border-radius: var(--border-radius);
+
+            position: relative;
+
+            overflow: hidden;
+
+            width: 100%;
+
+        }
+
+        
+
+        .hero::before {
+
+            content: '';
+
+            position: absolute;
+
+            top: -30px;
+
+            right: -30px;
+
+            width: 120px;
+
+            height: 120px;
+
+            background: var(--primary-lighter);
+
+            border-radius: 50%;
+
+            opacity: 0.3;
+
+        }
+
+        
+
+        .hero::after {
+
+            content: '';
+
+            position: absolute;
+
+            bottom: -50px;
+
+            left: -50px;
+
+            width: 150px;
+
+            height: 150px;
+
+            background: var(--primary-lighter);
+
+            border-radius: 50%;
+
+            opacity: 0.3;
+
+        }
+
+        
+
+        .hero h1 {
+
+            font-size: 1.8rem;
+
+            font-weight: 800;
+
+            color: var(--primary-dark);
+
+            margin-bottom: 15px;
+
+            position: relative;
+
+            z-index: 1;
+
+            line-height: 1.3;
+
+        }
+
+        
+
+        .hero p {
+
+            font-size: 1rem;
+
+            color: var(--text-light);
+
+            margin: 0 auto;
+
+            position: relative;
+
+            z-index: 1;
+
+            line-height: 1.5;
+
+        }
+
+        
+
+        .hero-buttons {
+
+            display: flex;
+
+            gap: 15px;
+
+            justify-content: center;
+
+            margin-top: 25px;
+
+            position: relative;
+
+            z-index: 1;
+
+            flex-wrap: wrap;
+
+        }
+
+        
+
+        .stats-section {
+
+            margin: 40px 0;
+
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 15px;
+
+            width: 100%;
+
+        }
+
+        
+
+        .stat-card {
+
+            background: var(--white);
+
+            border-radius: var(--border-radius);
+
+            padding: 20px 15px;
+
+            box-shadow: var(--shadow);
+
+            text-align: center;
+
+            transition: var(--transition);
+
+            width: 100%;
+
+        }
+
+        
+
+        .stat-card:hover {
+
+            transform: translateY(-5px);
+
+            box-shadow: var(--shadow-hover);
+
+        }
+
+        
+
+        .stat-icon {
+
+            font-size: 30px;
+
+            color: var(--primary);
+
+            margin-bottom: 10px;
+
+        }
+
+        
+
+        .stat-number {
+
+            font-size: 1.5rem;
+
+            font-weight: 800;
+
+            color: var(--primary-dark);
+
+            margin-bottom: 5px;
+
+        }
+
+        
+
+        .stat-text {
+
+            color: var(--text-light);
+
+            font-weight: 500;
+
+            font-size: 14px;
+
+        }
+
+        
+
+        .subjects-section {
+
+            margin: 40px 0;
+
+            width: 100%;
+
+        }
+
+        
+
+        .section-title {
+
+            text-align: center;
+
+            margin-bottom: 30px;
+
+            position: relative;
+
+            width: 100%;
+
+        }
+
+        
+
+        .section-title h2 {
+
+            font-size: 1.6rem;
+
+            font-weight: 800;
+
+            color: var(--primary-dark);
+
+            margin-bottom: 10px;
+
+        }
+
+        
+
+        .section-title p {
+
+            font-size: 1rem;
+
+            color: var(--text-light);
+
+            margin: 0 auto;
+
+            line-height: 1.5;
+
+        }
+
+        
+
+        .section-title::after {
+
+            content: '';
+
+            position: absolute;
+
+            bottom: -8px;
+
+            right: 50%;
+
+            transform: translateX(50%);
+
+            width: 100px;
+
+            height: 3px;
+
+            background: linear-gradient(to right, var(--primary), var(--primary-light));
+
+            border-radius: 2px;
+
+        }
+
+        
+
+        .subjects-grid {
+
+            display: grid;
+
+            grid-template-columns: 1fr;
+
+            gap: 20px;
+
+            width: 100%;
+
+        }
+
+        
+
+        .subject-card {
+
+            background: var(--white);
+
+            border-radius: var(--border-radius);
+
+            padding: 25px 20px;
+
+            box-shadow: var(--shadow);
+
+            transition: var(--transition);
+
+            text-align: center;
+
+            cursor: pointer;
+
+            border: 2px solid transparent;
+
+            position: relative;
+
+            overflow: hidden;
+
+            width: 100%;
+
+        }
+
+        
+
+        .subject-card::before {
+
+            content: '';
+
+            position: absolute;
+
+            top: 0;
+
+            right: 0;
+
+            width: 100%;
+
+            height: 5px;
+
+            background: linear-gradient(to right, var(--primary), var(--primary-light));
+
+        }
+
+        
+
+        .subject-card:hover {
+
+            transform: translateY(-5px);
+
+            box-shadow: var(--shadow-hover);
+
+            border-color: var(--primary-light);
+
+        }
+
+        
+
+        .subject-icon {
+
+            font-size: 40px;
+
+            color: var(--primary);
+
+            margin-bottom: 15px;
+
+            background: rgba(76, 175, 80, 0.1);
+
+            width: 80px;
+
+            height: 80px;
+
+            border-radius: 50%;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            margin: 0 auto 15px;
+
+            transition: var(--transition);
+
+        }
+
+        
+
+        .subject-card:hover .subject-icon {
+
+            transform: scale(1.05);
+
+            background: rgba(76, 175, 80, 0.2);
+
+        }
+
+        
+
+        .subject-card h3 {
+
+            color: var(--primary-dark);
+
+            margin-bottom: 8px;
+
+            font-size: 1.2rem;
+
+            font-weight: 700;
+
+        }
+
+        
+
+        .subject-card p {
+
+            color: var(--text-light);
+
+            margin-bottom: 15px;
+
+            font-size: 0.9rem;
+
+        }
+
+        
+
+        .subject-stats {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            color: var(--text-light);
+
+            font-size: 12px;
+
+            margin-top: 12px;
+
+        }
+
+        
+
+        .features-section {
+
+            margin: 40px 0;
+
+            background: var(--white);
+
+            border-radius: var(--border-radius);
+
+            padding: 30px 20px;
+
+            box-shadow: var(--shadow);
+
+            width: 100%;
+
+        }
+
+        
+
+        .features-grid {
+
+            display: grid;
+
+            grid-template-columns: 1fr;
+
+            gap: 25px;
+
+        }
+
+        
+
+        .feature-card {
+
+            text-align: center;
+
+            padding: 20px 15px;
+
+        }
+
+        
+
+        .feature-icon {
+
+            font-size: 36px;
+
+            color: var(--primary);
+
+            margin-bottom: 15px;
+
+        }
+
+        
+
+        .feature-card h3 {
+
+            color: var(--primary-dark);
+
+            margin-bottom: 10px;
+
+            font-size: 1.2rem;
+
+        }
+
+        
+
+        .feature-card p {
+
+            color: var(--text-light);
+
+            font-size: 0.9rem;
+
+            line-height: 1.5;
+
+        }
+
+        
+
+        footer {
+
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+
+            color: var(--white);
+
+            padding: 40px 0 20px;
+
+            margin-top: 50px;
+
+            width: 100%;
+
+        }
+
+        
+
+        .footer-content {
+
+            display: grid;
+
+            grid-template-columns: 1fr;
+
+            gap: 30px;
+
+            margin-bottom: 30px;
+
+        }
+
+        
+
+        .footer-column h3 {
+
+            font-size: 1.2rem;
+
+            margin-bottom: 20px;
+
+            position: relative;
+
+            padding-bottom: 8px;
+
+        }
+
+        
+
+        .footer-column h3::after {
+
+            content: '';
+
+            position: absolute;
+
+            bottom: 0;
+
+            right: 0;
+
+            width: 40px;
+
+            height: 2px;
+
+            background: var(--primary-lighter);
+
+        }
+
+        
+
+        .footer-links {
+
+            list-style: none;
+
+        }
+
+        
+
+        .footer-links li {
+
+            margin-bottom: 10px;
+
+        }
+
+        
+
+        .footer-links a {
+
+            color: var(--primary-lighter);
+
+            text-decoration: none;
+
+            transition: var(--transition);
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            font-size: 14px;
+
+        }
+
+        
+
+        .footer-links a:hover {
+
+            color: var(--white);
+
+            transform: translateX(-5px);
+
+        }
+
+        
+
+        .footer-bottom {
+
+            text-align: center;
+
+            padding-top: 20px;
+
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+        }
+
+        
+
+        .copyright {
+
+            color: var(--primary-lighter);
+
+            font-size: 14px;
+
+        }
+
+        
+
+        .modal {
+
+            display: none;
+
+            position: fixed;
+
+            top: 0;
+
+            left: 0;
+
+            width: 100%;
+
+            height: 100%;
+
+            background-color: rgba(0, 0, 0, 0.5);
+
+            z-index: 1000;
+
+            justify-content: center;
+
+            align-items: center;
+
+            padding: 20px;
+
+        }
+
+        
+
+        .modal-content {
+
+            background-color: var(--white);
+
+            border-radius: var(--border-radius);
+
+            width: 100%;
+
+            max-width: 500px;
+
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+
+            overflow: hidden;
+
+            animation: modalFadeIn 0.3s ease;
+
+        }
+
+        
+
+        @keyframes modalFadeIn {
+
+            from { opacity: 0; transform: translateY(-20px); }
+
+            to { opacity: 1; transform: translateY(0); }
+
+        }
+
+        
+
+        .modal-header {
+
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+
+            color: var(--white);
+
+            padding: 20px;
+
+            text-align: center;
+
+        }
+
+        
+
+        .modal-header h2 {
+
+            font-size: 1.5rem;
+
+            margin: 0;
+
+        }
+
+        
+
+        .modal-body {
+
+            padding: 25px;
+
+        }
+
+        
+
+        .form-group {
+
+            margin-bottom: 20px;
+
+        }
+
+        
+
+        .form-group label {
+
+            display: block;
+
+            margin-bottom: 8px;
+
+            font-weight: 500;
+
+            color: var(--text);
+
+        }
+
+        
+
+        .form-control {
+
+            width: 100%;
+
+            padding: 12px 15px;
+
+            border: 1px solid #ddd;
+
+            border-radius: 8px;
+
+            font-size: 16px;
+
+            transition: var(--transition);
+
+        }
+
+        
+
+        .form-control:focus {
+
+            border-color: var(--primary);
+
+            box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.2);
+
+            outline: none;
+
+        }
+
+        
+
+        .form-actions {
+
+            display: flex;
+
+            gap: 10px;
+
+            margin-top: 25px;
+
+        }
+
+        
+
+        .btn-block {
+
+            width: 100%;
+
+            justify-content: center;
+
+        }
+
+        
+
+        .alert {
+
+            padding: 10px 15px;
+
+            border-radius: 8px;
+
+            margin-bottom: 15px;
+
+            font-weight: 500;
+
+            display: none;
+
+        }
+
+        
+
+        .alert-error {
+
+            background-color: #ffebee;
+
+            color: #c62828;
+
+            border: 1px solid #ffcdd2;
+
+        }
+
+        
+
+        .alert-success {
+
+            background-color: #e8f5e9;
+
+            color: #2e7d32;
+
+            border: 1px solid #c8e6c9;
+
+        }
+
+        
+
+        .close-modal {
+
+            position: absolute;
+
+            top: 15px;
+
+            left: 15px;
+
+            background: rgba(255, 255, 255, 0.2);
+
+            color: var(--white);
+
+            border: none;
+
+            width: 30px;
+
+            height: 30px;
+
+            border-radius: 50%;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            cursor: pointer;
+
+            transition: var(--transition);
+
+        }
+
+        
+
+        .close-modal:hover {
+
+            background: rgba(255, 255, 255, 0.3);
+
+        }
+
+        
+
+        .user-info {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+        }
+
+        
+
+        .user-name {
+
+            display: none;
+
+        }
+
+        
+
+        .member-content {
+
+            display: none;
+
+            margin-top: 30px;
+
+            background: var(--white);
+
+            border-radius: var(--border-radius);
+
+            padding: 30px;
+
+            box-shadow: var(--shadow);
+
+        }
+
+        
+
+        .member-content h2 {
+
+            color: var(--primary-dark);
+
+            margin-bottom: 20px;
+
+            text-align: center;
+
+        }
+
+        
+
+        .content-grid {
+
+            display: grid;
+
+            grid-template-columns: 1fr;
+
+            gap: 20px;
+
+        }
+
+        
+
+        .content-card {
+
+            background: var(--light);
+
+            border-radius: 12px;
+
+            padding: 20px;
+
+            transition: var(--transition);
+
+            border-left: 4px solid var(--primary);
+
+        }
+
+        
+
+        .content-card:hover {
+
+            transform: translateY(-3px);
+
+            box-shadow: var(--shadow);
+
+        }
+
+        
+
+        .content-card h3 {
+
+            color: var(--primary-dark);
+
+            margin-bottom: 10px;
+
+        }
+
+        
+
+        .semester-modal {
+
+            display: none;
+
+            position: fixed;
+
+            top: 0;
+
+            left: 0;
+
+            width: 100%;
+
+            height: 100%;
+
+            background-color: rgba(0, 0, 0, 0.5);
+
+            z-index: 1000;
+
+            justify-content: center;
+
+            align-items: center;
+
+            padding: 20px;
+
+        }
+
+        
+
+        .semester-modal-content {
+
+            background-color: var(--white);
+
+            border-radius: var(--border-radius);
+
+            width: 100%;
+
+            max-width: 500px;
+
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+
+            overflow: hidden;
+
+            animation: modalFadeIn 0.3s ease;
+
+        }
+
+        
+
+        .semester-header {
+
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+
+            color: var(--white);
+
+            padding: 20px;
+
+            text-align: center;
+
+            position: relative;
+
+        }
+
+        
+
+        .semester-header h2 {
+
+            font-size: 1.5rem;
+
+            margin: 0;
+
+        }
+
+        
+
+        .semester-body {
+
+            padding: 25px;
+
+            text-align: center;
+
+        }
+
+        
+
+        .semester-options {
+
+            display: flex;
+
+            gap: 15px;
+
+            justify-content: center;
+
+            margin-top: 20px;
+
+            flex-wrap: wrap;
+
+        }
+
+        
+
+        .semester-card {
+
+            background: var(--light);
+
+            border-radius: 12px;
+
+            padding: 20px 15px;
+
+            cursor: pointer;
+
+            transition: var(--transition);
+
+            border: 2px solid transparent;
+
+            width: 150px;
+
+            text-align: center;
+
+        }
+
+        
+
+        .semester-card:hover {
+
+            transform: translateY(-5px);
+
+            box-shadow: var(--shadow);
+
+            border-color: var(--primary-light);
+
+        }
+
+        
+
+        .semester-card.selected {
+
+            border-color: var(--primary);
+
+            background: var(--primary-lighter);
+
+        }
+
+        
+
+        .semester-icon {
+
+            font-size: 35px;
+
+            color: var(--primary);
+
+            margin-bottom: 12px;
+
+        }
+
+        
+
+        .semester-card h3 {
+
+            color: var(--primary-dark);
+
+            margin-bottom: 8px;
+
+            font-size: 1.1rem;
+
+        }
+
+        
+
+        .content-type-modal {
+
+            display: none;
+
+            position: fixed;
+
+            top: 0;
+
+            left: 0;
+
+            width: 100%;
+
+            height: 100%;
+
+            background-color: rgba(0, 0, 0, 0.5);
+
+            z-index: 1000;
+
+            justify-content: center;
+
+            align-items: center;
+
+            padding: 20px;
+
+        }
+
+        
+
+        .content-type-modal-content {
+
+            background-color: var(--white);
+
+            border-radius: var(--border-radius);
+
+            width: 100%;
+
+            max-width: 500px;
+
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+
+            overflow: hidden;
+
+            animation: modalFadeIn 0.3s ease;
+
+        }
+
+        
+
+        .content-type-header {
+
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+
+            color: var(--white);
+
+            padding: 15px;
+
+            text-align: center;
+
+            position: relative;
+
+        }
+
+        
+
+        .content-type-header h2 {
+
+            font-size: 1.3rem;
+
+            margin: 0;
+
+        }
+
+        
+
+        .content-type-body {
+
+            padding: 20px;
+
+        }
+
+        
+
+        .content-type-options {
+
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 12px;
+
+            margin-top: 15px;
+
+        }
+
+        
+
+        .content-type-card {
+
+            background: var(--light);
+
+            border-radius: 10px;
+
+            padding: 18px 12px;
+
+            cursor: pointer;
+
+            transition: var(--transition);
+
+            border: 2px solid transparent;
+
+            text-align: center;
+
+        }
+
+        
+
+        .content-type-card:hover {
+
+            transform: translateY(-3px);
+
+            box-shadow: var(--shadow);
+
+            border-color: var(--primary-light);
+
+        }
+
+        
+
+        .content-type-card.selected {
+
+            border-color: var(--primary);
+
+            background: var(--primary-lighter);
+
+        }
+
+        
+
+        .content-type-icon {
+
+            font-size: 30px;
+
+            color: var(--primary);
+
+            margin-bottom: 10px;
+
+        }
+
+        
+
+        .content-type-card h3 {
+
+            color: var(--primary-dark);
+
+            margin-bottom: 6px;
+
+            font-size: 1rem;
+
+        }
+
+        
+
+        .content-type-card p {
+
+            font-size: 0.8rem;
+
+            color: var(--text-light);
+
+            line-height: 1.3;
+
+            margin: 0;
+
+        }
+
+        
+
+        .content-modal {
+
+            display: none;
+
+            position: fixed;
+
+            top: 0;
+
+            left: 0;
+
+            width: 100%;
+
+            height: 100%;
+
+            background-color: rgba(0, 0, 0, 0.5);
+
+            z-index: 1000;
+
+            justify-content: center;
+
+            align-items: center;
+
+            padding: 20px;
+
+        }
+
+        
+
+        .content-modal-content {
+
+            background-color: var(--white);
+
+            border-radius: var(--border-radius);
+
+            width: 100%;
+
+            max-width: 95%;
+
+            height: 90vh;
+
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+
+            overflow: hidden;
+
+            animation: modalFadeIn 0.3s ease;
+
+            display: flex;
+
+            flex-direction: column;
+
+        }
+
+        
+
+        .content-header {
+
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+
+            color: var(--white);
+
+            padding: 25px 20px;
+
+            text-align: center;
+
+            position: relative;
+
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+
+        }
+
+        
+
+        .content-header h2 {
+
+            font-size: 1.6rem;
+
+            margin: 0;
+
+            font-weight: 700;
+
+        }
+
+        
+
+        .search-container {
+
+            padding: 20px;
+
+            background: var(--light);
+
+            border-bottom: 1px solid #ddd;
+
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+
+        }
+
+        
+
+        .search-box {
+
+            display: flex;
+
+            gap: 12px;
+
+            max-width: 600px;
+
+            margin: 0 auto;
+
+        }
+
+        
+
+        .search-box input {
+
+            flex: 1;
+
+            padding: 14px 18px;
+
+            border: 1px solid #ddd;
+
+            border-radius: 10px;
+
+            font-size: 16px;
+
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+
+            transition: var(--transition);
+
+        }
+
+        
+
+        .search-box input:focus {
+
+            border-color: var(--primary);
+
+            box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.2);
+
+        }
+
+        
+
+        .search-box button {
+
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+
+            color: var(--white);
+
+            border: none;
+
+            border-radius: 10px;
+
+            padding: 0 25px;
+
+            cursor: pointer;
+
+            transition: var(--transition);
+
+            font-weight: 600;
+
+            box-shadow: 0 3px 10px rgba(46, 125, 50, 0.3);
+
+        }
+
+        
+
+        .search-box button:hover {
+
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+
+            transform: translateY(-2px);
+
+            box-shadow: 0 5px 15px rgba(46, 125, 50, 0.4);
+
+        }
+
+        
+
+        .content-body {
+
+            flex: 1;
+
+            overflow-y: auto;
+
+            padding: 25px;
+
+            background: linear-gradient(135deg, #f8fdf9 0%, #ffffff 100%);
+
+        }
+
+        
+
+        .content-grid-modal {
+
+            display: grid;
+
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+
+            gap: 20px;
+
+            max-width: 1400px;
+
+            margin: 0 auto;
+
+        }
+
+        
+
+        .content-card-modal {
+
+            background: var(--white);
+
+            border-radius: 16px;
+
+            padding: 0;
+
+            box-shadow: var(--shadow);
+
+            transition: var(--transition);
+
+            overflow: hidden;
+
+            border: 1px solid #e0e0e0;
+
+            border-top: 4px solid var(--primary);
+
+        }
+
+        
+
+        .content-card-modal:hover {
+
+            transform: translateY(-5px);
+
+            box-shadow: 0 15px 30px rgba(46, 125, 50, 0.2);
+
+            border-color: var(--primary-light);
+
+        }
+
+        
+
+        .content-image {
+
+            width: 100%;
+
+            height: 200px;
+
+            object-fit: cover;
+
+            border-bottom: 1px solid #eee;
+
+        }
+
+        
+
+        .content-card-body {
+
+            padding: 20px;
+
+        }
+
+        
+
+        .content-header-modal {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: flex-start;
+
+            margin-bottom: 12px;
+
+        }
+
+        
+
+        .content-title {
+
+            color: var(--primary-dark);
+
+            font-weight: 700;
+
+            font-size: 1.2rem;
+
+            line-height: 1.4;
+
+            flex: 1;
+
+            margin-right: 10px;
+
+        }
+
+        
+
+        .content-duration {
+
+            color: var(--white);
+
+            font-size: 0.85rem;
+
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+
+            padding: 5px 10px;
+
+            border-radius: 15px;
+
+            white-space: nowrap;
+
+        }
+
+        
+
+        .content-description {
+
+            color: var(--text);
+
+            margin-bottom: 18px;
+
+            font-size: 0.95rem;
+
+            line-height: 1.5;
+
+        }
+
+        
+
+        .content-actions {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+        }
+
+        
+
+        .content-info {
+
+            display: flex;
+
+            gap: 15px;
+
+            color: var(--text-light);
+
+            font-size: 0.85rem;
+
+        }
+
+        
+
+        .content-info span {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 5px;
+
+            background: var(--light);
+
+            padding: 5px 10px;
+
+            border-radius: 12px;
+
+        }
+
+        
+
+        .download-btn {
+
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+
+            color: var(--white);
+
+            border: none;
+
+            border-radius: 20px;
+
+            padding: 10px 20px;
+
+            font-size: 0.95rem;
+
+            cursor: pointer;
+
+            transition: var(--transition);
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            font-weight: 600;
+
+            box-shadow: 0 3px 10px rgba(46, 125, 50, 0.3);
+
+        }
+
+        
+
+        .download-btn:hover {
+
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+
+            transform: translateY(-2px);
+
+            box-shadow: 0 5px 15px rgba(46, 125, 50, 0.4);
+
+        }
+
+        
+
+        .subject-card::after {
+
+            content: '+9';
+
+            position: absolute;
+
+            top: 15px;
+
+            left: 15px;
+
+            background: rgba(128, 128, 128, 0.2);
+
+            color: rgba(128, 128, 128, 0.7);
+
+            font-size: 12px;
+
+            font-weight: bold;
+
+            padding: 4px 8px;
+
+            border-radius: 10px;
+
+            z-index: 2;
+
+        }
+
+        
+
+        @media (min-width: 1400px) {
+
+            .container {
+
+                max-width: 1600px;
+
+            }
+
+            
+
+            .subjects-grid {
+
+                grid-template-columns: repeat(4, 1fr);
+
+            }
+
+            
+
+            .features-grid {
+
+                grid-template-columns: repeat(4, 1fr);
+
+            }
+
+            
+
+            .content-grid {
+
+                grid-template-columns: repeat(4, 1fr);
+
+            }
+
+        }
+
+        
+
+        @media (min-width: 1200px) and (max-width: 1399px) {
+
+            .container {
+
+                max-width: 1400px;
+
+            }
+
+            
+
+            .subjects-grid {
+
+                grid-template-columns: repeat(3, 1fr);
+
+            }
+
+        }
+
+        
+
+        @media (max-width: 480px) {
+
+            .hero h1 {
+
+                font-size: 1.6rem;
+
+            }
+
+            
+
+            .section-title h2 {
+
+                font-size: 1.4rem;
+
+            }
+
+            
+
+            .hero-buttons {
+
+                flex-direction: column;
+
+                align-items: center;
+
+            }
+
+            
+
+            .btn {
+
+                width: 100%;
+
+                max-width: 280px;
+
+                justify-content: center;
+
+            }
+
+            
+
+            .user-actions {
+
+                width: 100%;
+
+                justify-content: center;
+
+            }
+
+            
+
+            .form-actions {
+
+                flex-direction: column;
+
+            }
+
+            
+
+            .content-header-modal {
+
+                flex-direction: column;
+
+                gap: 10px;
+
+            }
+
+            
+
+            .content-actions {
+
+                flex-direction: column;
+
+                gap: 10px;
+
+                align-items: flex-start;
+
+            }
+
+            
+
+            .search-box {
+
+                flex-direction: column;
+
+            }
+
+            
+
+            .semester-options {
+
+                flex-direction: column;
+
+                align-items: center;
+
+            }
+
+            
+
+            .content-type-options {
+
+                grid-template-columns: 1fr;
+
+            }
+
+        }
+
+        
+
+        @media (min-width: 768px) {
+
+            .container {
+
+                padding: 20px;
+
+            }
+
+            
+
+            .hero h1 {
+
+                font-size: 2.2rem;
+
+            }
+
+            
+
+            .hero p {
+
+                font-size: 1.1rem;
+
+            }
+
+            
+
+            .stats-section {
+
+                grid-template-columns: repeat(4, 1fr);
+
+                gap: 20px;
+
+            }
+
+            
+
+            .subjects-grid {
+
+                grid-template-columns: repeat(2, 1fr);
+
+            }
+
+            
+
+            .features-grid {
+
+                grid-template-columns: repeat(2, 1fr);
+
+            }
+
+            
+
+            .footer-content {
+
+                grid-template-columns: repeat(2, 1fr);
+
+            }
+
+            
+
+            .content-grid {
+
+                grid-template-columns: repeat(2, 1fr);
+
+            }
+
+            
+
+            .content-grid-modal {
+
+                grid-template-columns: 1fr;
+
+            }
+
+        }
+
+        
+
+        @media (min-width: 1024px) {
+
+            .container {
+
+                max-width: 1400px;
+
+                margin: 0 auto;
+
+            }
+
+            
+
+            .subjects-grid {
+
+                grid-template-columns: repeat(3, 1fr);
+
+            }
+
+            
+
+            .features-grid {
+
+                grid-template-columns: repeat(4, 1fr);
+
+            }
+
+            
+
+            .footer-content {
+
+                grid-template-columns: repeat(3, 1fr);
+
+            }
+
+            
+
+            .content-grid {
+
+                grid-template-columns: repeat(3, 1fr);
+
+            }
+
+            
+
+            .content-grid-modal {
+
+                grid-template-columns: 1fr;
+
+            }
+
+        }
+
+        
+
+        @media (max-width: 768px) {
+
+            .content-modal-content {
+
+                max-width: 98%;
+
+                height: 95vh;
+
+            }
+
+            
+
+            .content-grid-modal {
+
+                grid-template-columns: 1fr;
+
+                gap: 15px;
+
+            }
+
+            
+
+            .content-header h2 {
+
+                font-size: 1.3rem;
+
+            }
+
+            
+
+            .search-box {
+
+                flex-direction: column;
+
+            }
+
+            
+
+            .content-header-modal {
+
+                flex-direction: column;
+
+                gap: 10px;
+
+            }
+
+            
+
+            .content-actions {
+
+                flex-direction: column;
+
+                gap: 12px;
+
+                align-items: flex-start;
+
+            }
+
+            
+
+            .content-info {
+
+                width: 100%;
+
+                justify-content: space-between;
+
+            }
+
+        }
+
+        
+
+        @media (max-width: 480px) {
+
+            .content-type-options {
+
+                grid-template-columns: 1fr;
+
+                gap: 10px;
+
+            }
+
+            
+
+            .content-type-modal-content {
+
+                max-width: 95%;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+
+        <div class="container">
+
+            <div class="header-content">
+
+                <div class="logo">
+
+                    <div class="logo-icon">
+
+                        <i class="fas fa-graduation-cap"></i>
+
+                    </div>
+
+                    <div>
+
+                        <div class="logo-text">المنصة التعليمية</div>
+
+                        <div class="logo-subtitle">طلبة المدارس العليا للأساتذة</div>
+
+                    </div>
+
+                </div>
+
+                
+
+                <div class="user-actions">
+
+                    <div id="guest-actions">
+
+                        <a href="#" class="btn btn-outline" id="login-btn">
+
+                            <i class="fas fa-user"></i>
+
+                            تسجيل الدخول
+
+                        </a>
+
+                        <a href="#" class="btn btn-primary" id="signup-btn">
+
+                            <i class="fas fa-user-plus"></i>
+
+                            إنشاء حساب
+
+                        </a>
+
+                    </div>
+
+                    <div id="user-actions" style="display: none;">
+
+                        <div class="user-info">
+
+                            <a href="#" class="btn btn-outline" id="logout-btn">
+
+                                <i class="fas fa-sign-out-alt"></i>
+
+                                تسجيل الخروج
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+    
+
+    <div class="container">
+
+        <main class="main-content">
+
+            <section class="hero">
+
+                <h1>المنصة التعليمية الشاملة لطلبة المدارس العليا للأساتذة</h1>
+
+                <p>منصة تعليمية متطورة تقدم محتوى تعليمي متميز في مختلف التخصصات لطلبة المدارس العليا للأساتذة</p>
+
+                <div class="hero-buttons">
+
+                    <a href="#" class="btn btn-primary" id="start-learning-btn">
+
+                        <i class="fas fa-book-open"></i>
+
+                        ابدأ التعلم الآن
+
+                    </a>
+
+                    <a href="#" class="btn btn-outline" id="watch-video-btn">
+
+                        <i class="fas fa-play-circle"></i>
+
+                        شاهد الفيديو التعريفي
+
+                    </a>
+
+                </div>
+
+            </section>
+
+            
+
+            <section class="stats-section">
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+
+                        <i class="fas fa-book"></i>
+
+                    </div>
+
+                    <div class="stat-number">150+</div>
+
+                    <div class="stat-text">مادة تعليمية</div>
+
+                </div>
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+
+                        <i class="fas fa-video"></i>
+
+                    </div>
+
+                    <div class="stat-number">500+</div>
+
+                    <div class="stat-text">درس مرئي</div>
+
+                </div>
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+
+                        <i class="fas fa-user-graduate"></i>
+
+                    </div>
+
+                    <div class="stat-number">2,500+</div>
+
+                    <div class="stat-text">طالب مستفيد</div>
+
+                </div>
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+
+                        <i class="fas fa-chalkboard-teacher"></i>
+
+                    </div>
+
+                    <div class="stat-number">50+</div>
+
+                    <div class="stat-text">أستاذ متميز</div>
+
+                </div>
+
+            </section>
+
+            
+
+            <section class="subjects-section">
+
+                <div class="section-title">
+
+                    <h2>المقاييس التعليمية</h2>
+
+                    <p>اختر المادة التعليمية التي تريد دراستها من بين مجموعة واسعة من التخصصات</p>
+
+                </div>
+
+                
+
+                <div class="subjects-grid">
+
+                    <div class="subject-card" data-subject="math">
+
+                        <div class="subject-icon">
+
+                            <i class="fas fa-calculator"></i>
+
+                        </div>
+
+                        <h3>الرياضيات</h3>
+
+                        <p>دراسة المفاهيم الرياضية الأساسية والمتقدمة</p>
+
+                        <div class="subject-stats">
+
+                            <span><i class="fas fa-book"></i> 5 دروس</span>
+
+                            <span><i class="fas fa-download"></i> 750 تحميل</span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="subject-card" data-subject="mechanics">
+
+                        <div class="subject-icon">
+
+                            <i class="fas fa-cogs"></i>
+
+                        </div>
+
+                        <h3>الميكانيك</h3>
+
+                        <p>دراسة القوى والحركة وتطبيقاتها العملية</p>
+
+                        <div class="subject-stats">
+
+                            <span><i class="fas fa-book"></i> 5 دروس</span>
+
+                            <span><i class="fas fa-download"></i> 680 تحميل</span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="subject-card" data-subject="chemistry">
+
+                        <div class="subject-icon">
+
+                            <i class="fas fa-atom"></i>
+
+                        </div>
+
+                        <h3>بنية المادة</h3>
+
+                        <p>دراسة تركيب المادة والتفاعلات الكيميائية</p>
+
+                        <div class="subject-stats">
+
+                            <span><i class="fas fa-book"></i> 5 دروس</span>
+
+                            <span><i class="fas fa-download"></i> 620 تحميل</span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="subject-card" data-subject="islamic">
+
+                        <div class="subject-icon">
+
+                            <i class="fas fa-mosque"></i>
+
+                        </div>
+
+                        <h3>التربية الإسلامية</h3>
+
+                        <p>مبادئ وأسس التربية في الإسلام</p>
+
+                        <div class="subject-stats">
+
+                            <span><i class="fas fa-book"></i> 5 دروس</span>
+
+                            <span><i class="fas fa-download"></i> 890 تحميل</span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="subject-card" data-subject="english">
+
+                        <div class="subject-icon">
+
+                            <i class="fas fa-language"></i>
+
+                        </div>
+
+                        <h3>اللغة الإنجليزية</h3>
+
+                        <p>تطوير مهارات اللغة الإنجليزية بجميع مستوياتها</p>
+
+                        <div class="subject-stats">
+
+                            <span><i class="fas fa-book"></i> 5 دروس</span>
+
+                            <span><i class="fas fa-download"></i> 950 تحميل</span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="subject-card" data-subject="arabic">
+
+                        <div class="subject-icon">
+
+                            <i class="fas fa-scroll"></i>
+
+                        </div>
+
+                        <h3>الأدب العربي قديما وحديثا</h3>
+
+                        <p>دراسة الأدب العربي عبر العصور المختلفة</p>
+
+                        <div class="subject-stats">
+
+                            <span><i class="fas fa-book"></i> 5 دروس</span>
+
+                            <span><i class="fas fa-download"></i> 720 تحميل</span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="subject-card" data-subject="sarf">
+
+                        <div class="subject-icon">
+
+                            <i class="fas fa-language"></i>
+
+                        </div>
+
+                        <h3>الصرف</h3>
+
+                        <p>دراسة تحولات الكلمة وأوزانها في اللغة العربية</p>
+
+                        <div class="subject-stats">
+
+                            <span><i class="fas fa-book"></i> 5 دروس</span>
+
+                            <span><i class="fas fa-download"></i> 650 تحميل</span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="subject-card" data-subject="imla">
+
+                        <div class="subject-icon">
+
+                            <i class="fas fa-pen-nib"></i>
+
+                        </div>
+
+                        <h3>الإملاء</h3>
+
+                        <p>قواعد الكتابة الصحيحة في اللغة العربية</p>
+
+                        <div class="subject-stats">
+
+                            <span><i class="fas fa-book"></i> 5 دروس</span>
+
+                            <span><i class="fas fa-download"></i> 780 تحميل</span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="subject-card" data-subject="balagha">
+
+                        <div class="subject-icon">
+
+                            <i class="fas fa-book-open"></i>
+
+                        </div>
+
+                        <h3>علم البلاغة</h3>
+
+                        <p>دراسة الفصاحة والبلاغة في اللغة العربية</p>
+
+                        <div class="subject-stats">
+
+                            <span><i class="fas fa-book"></i> 5 دروس</span>
+
+                            <span><i class="fas fa-download"></i> 710 تحميل</span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="subject-card" data-subject="taabir">
+
+                        <div class="subject-icon">
+
+                            <i class="fas fa-comments"></i>
+
+                        </div>
+
+                        <h3>فنيات الكتابة والتعبير</h3>
+
+                        <p>تطوير مهارات التعبير الكتابي والشفوي</p>
+
+                        <div class="subject-stats">
+
+                            <span><i class="fas fa-book"></i> 5 دروس</span>
+
+                            <span><i class="fas fa-download"></i> 820 تحميل</span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="subject-card" data-subject="technology">
+
+                        <div class="subject-icon">
+
+                            <i class="fas fa-laptop-code"></i>
+
+                        </div>
+
+                        <h3>تكنولوجيا الإعلام والاتصال</h3>
+
+                        <p>دراسة تطبيقات التكنولوجيا في مجال الإعلام والاتصال</p>
+
+                        <div class="subject-stats">
+
+                            <span><i class="fas fa-book"></i> 5 دروس</span>
+
+                            <span><i class="fas fa-download"></i> 690 تحميل</span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            
+
+            <div class="member-content" id="member-content">
+
+                <h2>المحتوى الحصري للأعضاء</h2>
+
+                <div class="content-grid">
+
+                    <div class="content-card">
+
+                        <h3>دروس متقدمة في الرياضيات</h3>
+
+                        <p>دروس مفصلة تغطي مواضيع متقدمة في الرياضيات مع تمارين تطبيقية وحلول مفصلة.</p>
+
+                    </div>
+
+                    <div class="content-card">
+
+                        <h3>تجارب معملية في الكيمياء</h3>
+
+                        <p>سلسلة من التجارب المعملية المصورة لتوضيح المفاهيم الكيميائية بشكل عملي.</p>
+
+                    </div>
+
+                    <div class="content-card">
+
+                        <h3>محاضرات فيزياء حصرية</h3>
+
+                        <p>محاضرات مسجلة من أساتذة متخصصين في الفيزياء تغطي المنهج الدراسي بالكامل.</p>
+
+                    </div>
+
+                    <div class="content-card">
+
+                        <h3>تمارين تفاعلية</h3>
+
+                        <p>تمارين تفاعلية مع تصحيح فوري لتقييم مستوى الفهم والاستيعاب.</p>
+
+                    </div>
+
+                    <div class="content-card">
+
+                        <h3>نماذج امتحانات سابقة</h3>
+
+                        <p>مجموعة شاملة من نماذج الامتحانات السابقة مع الحلول النموذجية.</p>
+
+                    </div>
+
+                    <div class="content-card">
+
+                        <h3>مواد إثرائية</h3>
+
+                        <p>مواد إثرائية إضافية لتعميق الفهم وتوسيع المعرفة في التخصصات المختلفة.</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            
+
+            <section class="features-section">
+
+                <div class="section-title">
+
+                    <h2>مميزات المنصة</h2>
+
+                    <p>نقدم لكم أفضل الخدمات التعليمية بتقنيات حديثة وطرق مبتكرة</p>
+
+                </div>
+
+                
+
+                <div class="features-grid">
+
+                    <div class="feature-card">
+
+                        <div class="feature-icon">
+
+                            <i class="fas fa-laptop"></i>
+
+                        </div>
+
+                        <h3>تعلم في أي وقت</h3>
+
+                        <p>الوصول إلى المحتوى التعليمي في أي وقت ومن أي مكان يناسبك</p>
+
+                    </div>
+
+                    <div class="feature-card">
+
+                        <div class="feature-icon">
+
+                            <i class="fas fa-download"></i>
+
+                        </div>
+
+                        <h3>تحميل المواد</h3>
+
+                        <p>إمكانية تحميل الدروس والمواد التعليمية للدراسة بدون اتصال</p>
+
+                    </div>
+
+                    <div class="feature-card">
+
+                        <div class="feature-icon">
+
+                            <i class="fas fa-chalkboard-teacher"></i>
+
+                        </div>
+
+                        <h3>أساتذة متميزون</h3>
+
+                        <p>تعلم من أفضل الأساتذة المتخصصين في المجال التعليمي</p>
+
+                    </div>
+
+                    <div class="feature-card">
+
+                        <div class="feature-icon">
+
+                            <i class="fas fa-certificate"></i>
+
+                        </div>
+
+                        <h3>شهادات معتمدة</h3>
+
+                        <p>احصل على شهادات معتمدة بعد إتمامك للمسارات التعليمية</p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    
+
+    <footer>
+
+        <div class="container">
+
+            <div class="footer-content">
+
+                <div class="footer-column">
+
+                    <h3>عن المنصة</h3>
+
+                    <p>منصة تعليمية متخصصة لطلبة المدارس العليا للأساتذة، تهدف إلى تقديم محتوى تعليمي متميز في مختلف التخصصات.</p>
+
+                </div>
+
+                <div class="footer-column">
+
+                    <h3>روابط سريعة</h3>
+
+                    <ul class="footer-links">
+
+                        <li><a href="#"><i class="fas fa-home"></i> الصفحة الرئيسية</a></li>
+
+                        <li><a href="#"><i class="fas fa-book"></i> المواد التعليمية</a></li>
+
+                        <li><a href="#"><i class="fas fa-chalkboard-teacher"></i> الأساتذة</a></li>
+
+                        <li><a href="#"><i class="fas fa-question-circle"></i> الأسئلة الشائعة</a></li>
+
+                    </ul>
+
+                </div>
+
+                <div class="footer-column">
+
+                    <h3>اتصل بنا</h3>
+
+                    <ul class="footer-links">
+
+                        <li><a href="#"><i class="fas fa-envelope"></i> info@platform.edu</a></li>
+
+                        <li><a href="#"><i class="fas fa-phone"></i> +213 123 456 789</a></li>
+
+                        <li><a href="#"><i class="fas fa-map-marker-alt"></i> الجزائر</a></li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+
+                <div class="copyright">
+
+                    جميع الحقوق محفوظة &copy; 2023 المنصة التعليمية لطلبة المدارس العليا للأساتذة
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <!-- نافذة تسجيل الدخول -->
+
+    <div class="modal" id="login-modal">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+
+                <button class="close-modal">&times;</button>
+
+                <h2>تسجيل الدخول</h2>
+
+            </div>
+
+            <div class="modal-body">
+
+                <div id="login-alert" class="alert alert-error"></div>
+
+                <form id="login-form">
+
+                    <div class="form-group">
+
+                        <label for="login-email">البريد الإلكتروني</label>
+
+                        <input type="email" id="login-email" class="form-control" required>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="login-password">كلمة المرور (4 أرقام)</label>
+
+                        <input type="password" id="login-password" class="form-control" maxlength="4" pattern="\d{4}" required>
+
+                    </div>
+
+                    <div class="form-actions">
+
+                        <button type="submit" class="btn btn-primary btn-block">تسجيل الدخول</button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- نافذة إنشاء حساب -->
+
+    <div class="modal" id="signup-modal">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+
+                <button class="close-modal">&times;</button>
+
+                <h2>إنشاء حساب جديد</h2>
+
+            </div>
+
+            <div class="modal-body">
+
+                <div id="signup-alert" class="alert alert-error"></div>
+
+                <form id="signup-form">
+
+                    <div class="form-group">
+
+                        <label for="signup-firstname">الاسم</label>
+
+                        <input type="text" id="signup-firstname" class="form-control" required>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="signup-lastname">اسم العائلة</label>
+
+                        <input type="text" id="signup-lastname" class="form-control" required>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="signup-email">البريد الإلكتروني</label>
+
+                        <input type="email" id="signup-email" class="form-control" required>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="signup-password">كلمة المرور (4 أرقام)</label>
+
+                        <input type="password" id="signup-password" class="form-control" maxlength="4" pattern="\d{4}" required>
+
+                    </div>
+
+                    <div class="form-actions">
+
+                        <button type="submit" class="btn btn-primary btn-block">إنشاء حساب</button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- نافذة اختيار السداسي -->
+
+    <div class="semester-modal" id="semester-modal">
+
+        <div class="semester-modal-content">
+
+            <div class="semester-header">
+
+                <button class="close-modal">&times;</button>
+
+                <h2 id="semester-title">اختر السداسي</h2>
+
+            </div>
+
+            <div class="semester-body">
+
+                <p>اختر السداسي الذي ترغب في استعراض محتواه التعليمي</p>
+
+                <div class="semester-options">
+
+                    <div class="semester-card" data-semester="1">
+
+                        <div class="semester-icon">
+
+                            <i class="fas fa-1"></i>
+
+                        </div>
+
+                        <h3>السداسي الأول</h3>
+
+                    </div>
+
+                    <div class="semester-card" data-semester="2">
+
+                        <div class="semester-icon">
+
+                            <i class="fas fa-2"></i>
+
+                        </div>
+
+                        <h3>السداسي الثاني</h3>
+
+                    </div>
+
+                </div>
+
+                <div class="form-actions" style="margin-top: 30px;">
+
+                    <button class="btn btn-primary" id="confirm-semester">تأكيد الاختيار</button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- نافذة اختيار نوع المحتوى -->
+
+    <div class="content-type-modal" id="content-type-modal">
+
+        <div class="content-type-modal-content">
+
+            <div class="content-type-header">
+
+                <button class="close-modal">&times;</button>
+
+                <h2 id="content-type-title">اختر نوع المحتوى</h2>
+
+            </div>
+
+            <div class="content-type-body">
+
+                <p>اختر نوع المحتوى التعليمي الذي ترغب في استعراضه</p>
+
+                <div class="content-type-options">
+
+                    <div class="content-type-card" data-content-type="lessons">
+
+                        <div class="content-type-icon">
+
+                            <i class="fas fa-book"></i>
+
+                        </div>
+
+                        <h3>الدروس</h3>
+
+                        <p>المواد التعليمية النظرية والشرح</p>
+
+                    </div>
+
+                    <div class="content-type-card" data-content-type="exercises">
+
+                        <div class="content-type-icon">
+
+                            <i class="fas fa-pen"></i>
+
+                        </div>
+
+                        <h3>التمارين</h3>
+
+                        <p>تمارين تطبيقية وحلول</p>
+
+                    </div>
+
+                    <div class="content-type-card" data-content-type="tests">
+
+                        <div class="content-type-icon">
+
+                            <i class="fas fa-clipboard-check"></i>
+
+                        </div>
+
+                        <h3>الاختبارات</h3>
+
+                        <p>نماذج اختبارات وتقييمات</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- نافذة عرض المحتوى -->
+
+    <div class="content-modal" id="content-modal">
+
+        <div class="content-modal-content">
+
+            <div class="content-header">
+
+                <button class="close-modal">&times;</button>
+
+                <h2 id="content-title">دروس وتمارين المادة</h2>
+
+            </div>
+
+            <div class="search-container">
+
+                <div class="search-box">
+
+                    <input type="text" id="search-content" placeholder="ابحث...">
+
+                    <button id="search-btn"><i class="fas fa-search"></i> بحث</button>
+
+                </div>
+
+            </div>
+
+            <div class="content-body">
+
+                <div class="content-grid-modal" id="content-grid">
+
+                    <!-- سيتم ملء المحتوى هنا ديناميكياً -->
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+
+        // بيانات المحتوى الكاملة لجميع المواد مع السداسي ونوع المحتوى
+
+        const contentData = {
+
+            math: {
+
+                semester1: {
+
+                    lessons: [
+
+                        {
+
+                            id: 1,
+
+                            title: "برنامج الرياضيات السداسي الاول",
+
+                            description: "أستاذ تعليم إبتدائي اللغة العربية النظام الجديد", 
+
+                            downloads: 3521,
+
+                            views: 14182,
+
+                            driveLink: "https://drive.google.com/drive/folders/1yOK7b7eTebpowGa5Y_vjux-jks6YETFH",
+
+                            image: "https://i.ibb.co/ksMrbP2n/IMG-20251015-175844-375.jpg"
+
+                        },
+           
+                       {
+
+                            id: 2,
+
+                            title:"الوحدة الاولى الاستدلال او المنطق الرياضي  مقسمة على اربعة اجزاء  الجزء الاول prof fares",
+
+                            description: "المدرسة العليا للأساتذة استاذ تعليم ابتدائي اللغة العربية النظام الجديد", 
+
+                            downloads: 331,
+
+                            views: 8994,
+
+                            driveLink: "https://drive.google.com/drive/folders/1G6MZ8-GN_J_0k897ouPYUpA0xkXvcwto",
+
+                            image: "https://i.ibb.co/3mn39kSD/img-1761768211007.jpg"
+
+                        },
+
+                       
+                
+
+                  
+
+                    ],
+
+                    exercises: [
+
+                        {
+
+                            id: 1,
+
+                            title: "تمارين في القضايا الرياضية",
+
+                            description: "المدرسة العليا للأساتذة استاذ تعليم ابتدائي",
+
+                            downloads: 287,
+
+                            views: 3984,
+
+                            driveLink: "https://drive.google.com/drive/folders/13Og8ZdPj5hHK7jyFuYkxigMbb4WcBjtZ",
+
+                            image: "https://i.ibb.co/G4YYb4bN/Screenshot-20251023-163543-Samsung-Notes.jpg"
+
+                        },
+
+                        {
+
+                            id: 2,
+
+                            title: "تمارين في انماط البرهان والقضايا",
+
+                            description: "مدرسة عليا للأساتذة استاذ تعليم ابتدائي",
+
+                            downloads: 421,
+
+                            views: 5631,
+
+                            driveLink: "https://drive.google.com/drive/folders/1nrurV4IiWK9pwQ1XMQC6UKVNYtsxg7tn",
+
+                            image: "https://i.ibb.co/d4sH3XmN/Screenshot-20251028-134921-Chrome.jpg"
+
+                        },
+                       {
+
+                            id: 3,
+
+                            title: "سلسلة تمارين في القضايا والمنطق الرياضي",
+
+                            description: "استاذ تعليم ابتدائي مدرسة عليا للأساتذة",
+
+                            downloads: 198,
+
+                            views: 915,
+
+                            driveLink: "https://drive.google.com/drive/folders/14je6btPgLZnizNCeH4jH8yWxe6BvNhzD",
+
+                            image: "https://i.ibb.co/LDYccznj/Screenshot-20251023-163550-Samsung-Notes.jpg"
+
+                        },
+
+                    ],
+
+                    tests: [
+
+                     
+
+                    ]
+
+                },
+
+                semester2: {
+
+                    lessons: [
+
+                       
+
+                    ],
+
+                    exercises: [
+
+                       
+
+                    ],
+
+                    tests: [
+
+                       
+
+                      
+
+                    ]
+
+                }
+
+            },
+           technology: {
+
+                semester1: {
+
+                    lessons: [
+                      {
+
+                            id: 1,
+
+                            title:"الوحدة الاولى كاملة prof fares",
+
+                            description: "المدرسة العليا للأساتذة استاذ تعليم ابتدائي اللغة العربية النظام الجديد", 
+
+                            downloads:  541,
+
+                            views: 10994,
+
+                            driveLink: "https://drive.google.com/drive/folders/1HR-ZMjncFbHbYY7LqyLRaqzwOAy1P8Ds",
+
+                            image: "https://i.ibb.co/rGPT1X6n/IMG-20251030-220341-022.jpg"
+
+                        },
+
+                        {
+
+                            id: 2,
+
+                            title:"  برنامج تكنلوجيا اعلام واتصال prof amani",
+
+                            description: "أستاذ تعليم إبتدائي اللغة العربية النظام الجديد", 
+
+                            downloads: 391,
+
+                            views: 2482,
+
+                            driveLink: "https://drive.google.com/drive/folders/1Bn2_6hv9M6TOFWLYirJ0V-qeLDVV7vrt",
+
+                            image: "https://i.ibb.co/4wx1Td60/Screenshot-20251028-164611-Chrome.jpg"
+
+                        },
+{
+
+                            id: 3,
+
+                            title:"حصة اعمال موجهة رقم 1 في تكنلوجيا الاعلام والاتصال prof fares",
+
+                            description: "أستاذ تعليم إبتدائي اللغة العربية النظام الجديد", 
+
+                            downloads: 120,
+
+                            views: 3482,
+
+                            driveLink: "https://drive.google.com/drive/folders/1e8TB9nhhpZ-MC8qC-Y2Zdrl78lXZ-WBr",
+
+                            image: "https://i.ibb.co/fbdMvkL/Screenshot-20251028-164640-Chrome.jpg"
+
+                        },
+                      {
+
+                            id: 4,
+
+                            title:"مدخل للأنضمة الحاسوبية والشبكات prof fares",
+
+                            description: "المدرسة العليا للأساتذة استاذ تعليم ابتدائي اللغة العربية النظام الجديد", 
+
+                            downloads: 341,
+
+                            views: 3994,
+
+                            driveLink: "https://drive.google.com/drive/folders/1-E-jsIAtHfi8Ucc6dn779ZsiEvFQ-55V",
+
+                            image: "https://i.ibb.co/9kBwLbW5/Screenshot-20251028-164700-Chrome.jpg"
+
+                        },
+                {
+
+                            id: 5,
+
+                            title:"مفهوم التعليم الالكتروني واهميته في تطوير العملية التربوية prof amani",
+
+                            description: "المدرسة العليا للأساتذة استاذ تعليم ابتدائي اللغة العربية النظام الجديد", 
+
+                            downloads: 349,
+
+                            views: 3294,
+
+                            driveLink: "https://drive.google.com/drive/folders/1-cy_u2Q6Kr-SV_gUlDwmlBcjnG2UkWLY",
+
+                            image: "https://i.ibb.co/WN7TYSkM/Screenshot-20251028-164718-Chrome.jpg"
+
+                        },       
+{
+
+                            id: 6,
+
+                            title:"المحاضرة الاولى في تكنلوجيا الاعلام والاتصال prof amani",
+
+                            description: "المدرسة العليا للأساتذة استاذ تعليم ابتدائي اللغة العربية النظام الجديد", 
+
+                            downloads: 671,
+
+                            views: 9877,
+
+                            driveLink: "https://drive.google.com/drive/folders/1r36iFq6SaMfV-AzPx50Ou8LoO5O_NmGN",
+
+                            image: "https://i.ibb.co/G4Q3Y54m/Screenshot-20251028-164741-Chrome.jpg"
+
+                        },
+                      {
+
+                            id: 7,
+
+                            title:"التعلم عبر الانترنت والبريد الالكتروني prof amani",
+
+                            description: "المدرسة العليا للأساتذة استاذ تعليم ابتدائي اللغة العربية النظام الجديد", 
+
+                            downloads: 928,
+
+                            views: 9882,
+
+                            driveLink: "https://drive.google.com/drive/folders/1_Vd0X_9cN9VXCmqrUv0GsAj9oamAXlWV",
+
+                            image: "https://i.ibb.co/ds1XNRYb/Screenshot-20251028-164802-Chrome.jpg"
+
+                        },
+                      
+                      
+                      
+                      
+                      
+                  
+                    ],
+
+                    exercises: [
+
+                       
+
+                     
+
+                    ],
+
+                    tests: [
+
+                       
+
+                        
+
+                    ]
+
+                },
+
+                semester2: {
+
+                    lessons: [
+
+                       
+                      
+
+                    ],
+
+                    exercises: [
+
+                       
+
+                    ],
+
+                    tests: [
+
+                       
+                        
+
+                    ]
+
+                }
+
+            },
+       
+           taabir: {
+
+                semester1: {
+
+                    lessons: [
+
+                        {
+
+                            id: 1,
+
+                            title:"الدرس الاول في فنيات الكتابة والتعبير prof amani",
+
+                            description: "المدرسة العليا للأساتذة أستاذ تعليم إبتدائي اللغة العربية النظام الجديد", 
+
+                            downloads: 234,
+
+                            views: 9876,
+
+                            driveLink: "https://drive.google.com/drive/folders/1MXPLvpUifH0AUO1IfCJ-i9tu7XzapUps",
+
+                            image: "https://i.ibb.co/7NGNy7xv/Screenshot-20251027-163448-Chrome.jpg"
+
+                        },
+
+                       {
+
+                            id: 2,
+
+                            title:"الدرس الثاني فنيات الكتابة والتعبير prof fares",
+
+                            description: "المدرسة العليا للأساتذة استاذ تعليم ابتدائي اللغة العربية النظام الجديد", 
+
+                            downloads: 987,
+
+                            views: 9987,
+
+                            driveLink: "https://drive.google.com/drive/folders/1ABdxLkDUyLHuuw48I29fmiu29-wr3KPn",
+
+                            image: "https://i.ibb.co/wrdgwdbn/Screenshot-20251027-163505-Chrome.jpg"
+
+                        },
+{
+
+                            id: 3,
+
+                            title:"الدرس الثالث فنيات الكتابة والتعبير prof fares",
+
+                            description: "المدرسة العليا للأساتذة استاذ تعليم ابتدائي اللغة العربية النظام الجديد", 
+
+                            downloads: 235,
+
+                            views: 9994,
+
+                            driveLink: "https://drive.google.com/drive/folders/1vW7OohaDqv2VXjMPctyWqHvWHZPTc2Ci",
+
+                            image: "https://i.ibb.co/60v3zbcC/Screenshot-20251027-163524-Chrome.jpg"
+
+                        },
+                    ],
+
+                    exercises: [
+
+                       
+
+                     
+
+                    ],
+
+                    tests: [
+
+                        
+                        
+
+                    ]
+
+                },
+
+                semester2: {
+
+                    lessons: [
+
+                       
+                      
+
+                    ],
+
+                    exercises: [
+
+                       
+
+                    ],
+
+                    tests: [
+
+                       
+                        
+
+                    ]
+
+                }
+
+            },
+       
+           balagha: {
+
+                semester1: {
+
+                    lessons: [
+
+                        {
+
+                            id: 1,
+
+                            title:"مدخل الى علم البلاغة الدرس الاول prof fares",
+
+                            description: "المدرسة العليا للأساتذة أستاذ تعليم إبتدائي اللغة العربية النظام الجديد", 
+
+                            downloads: 887,
+
+                            views: 1282,
+
+                            driveLink: "https://drive.google.com/drive/folders/1W1edE8moiFnJ9PBge41imDj_Cj3QpLNo",
+
+                            image: "https://i.ibb.co/b5VgZTF6/Screenshot-20251027-163643-Chrome.jpg"
+
+                        },
+{
+
+                            id: 2,
+
+                            title:"مخطط للمحاضرة الاولى في البلاغة ",
+
+                            description: "المدرسة العليا للأساتذة استاذ تعليم ابتدائي اللغة العربية النظام الجديد", 
+
+                            downloads: 876,
+
+                            views: 9877,
+
+                            driveLink: "https://drive.google.com/drive/folders/1TgDjR2kerOaPwdTZsEWNnv-kT_aDeASX",
+
+                            image: "https://i.ibb.co/MD66bqZ1/Screenshot-20251027-163705-Chrome.jpg"
+
+                        },
+                       
+
+                    ],
+
+                    exercises: [
+
+                        
+                     
+
+                    ],
+
+                    tests: [
+
+                        
+
+                        
+
+                    ]
+
+                },
+
+                semester2: {
+
+                    lessons: [
+
+                       
+                      
+
+                    ],
+
+                    exercises: [
+
+                       
+
+                    ],
+
+                    tests: [
+
+                       
+                        
+
+                    ]
+
+                }
+
+            },
+       
+           imla: {
+
+                semester1: {
+
+                    lessons: [
+
+                        {
+
+                            id: 1,
+
+                            title:"برنامج الاملاء prof fares",
+
+                            description: "المدرسة العليا للأساتذة أستاذ تعليم إبتدائي اللغة العربية النظام الجديد", 
+
+                            downloads: 987,
+
+                            views: 4882,
+
+                            driveLink: "https://drive.google.com/drive/folders/160MlPaObV2MKREs7gTOMNV_xlLQQu1F6",
+
+                            image: "https://i.ibb.co/Cpp71pRX/Screenshot-20251027-132152-Chrome.jpg"
+
+                        },
+{
+
+                            id:2,
+
+                            title:" درس ملخص همزة الممدودة prof amani",
+
+                            description: "المدرسة العليا للأساتذة استاذ تعليم ابتدائي اللغة العربية النظام الجديد", 
+
+                            downloads: 233,
+
+                            views: 2994,
+
+                            driveLink: "https://drive.google.com/drive/folders/1RTW-9LJ2QK4S4p42HpkTQ_5jOR_y7SfK",
+
+                            image: "https://i.ibb.co/VW4WhGfK/Screenshot-20251027-132209-Chrome.jpg"
+
+                        },
+                      {
+
+                            id: 2,
+
+                            title:"مراجع الاملاء prof amani",
+
+                            description: "المدرسة العليا للأساتذة استاذ تعليم ابتدائي اللغة العربية النظام الجديد", 
+
+                            downloads: 887,
+
+                            views: 3884,
+
+                            driveLink: "https://drive.google.com/drive/folders/1FiGKbC8VaFV_tkFyTvmI3ZUAPgpMa0n-",
+
+                            image: "https://i.ibb.co/67qD4Xq2/Screenshot-20251027-163850-Drive.jpg"
+
+                        },
+                       
+
+                    ],
+
+                    exercises: [
+
+                      
+                     
+
+                    ],
+
+                    tests: [
+
+                       
+
+                        
+
+                    ]
+
+                },
+
+                semester2: {
+
+                    lessons: [
+
+                       
+                      
+
+                    ],
+
+                    exercises: [
+
+                       
+
+                    ],
+
+                    tests: [
+
+                       
+                        
+
+                    ]
+
+                }
+
+            },
+       
+           sarf: {
+
+                semester1: {
+
+                    lessons: [
+
+                        {
+
+                            id: 1,
+
+                            title:"مفهوم الصرف prof fares",
+
+                            description: "أستاذ تعليم إبتدائي اللغة العربية النظام الجديد", 
+
+                            downloads: 677,
+
+                            views: 992,
+
+                            driveLink: "https://drive.google.com/drive/folders/1bVrRWoT6hnv06zDdYUpvWktwyUsvUvP7",
+
+                            image: "https://i.ibb.co/dsdSfdP2/Screenshot-20251027-163040-Drive.jpg"
+
+                        },
+{
+
+                            id: 2,
+
+                            title:"مراجع الصرف prof amani",
+
+                            description: "المدرسة العليا للأساتذة استاذ تعليم ابتدائي اللغة العربية النظام الجديد", 
+
+                            downloads: 829,
+
+                            views: 2894,
+
+                            driveLink: "https://drive.google.com/drive/folders/15er5r0er8ys0XaR6Fk7-FeQXi4xF_YnW",
+
+                            image: "https://i.ibb.co/Gfz0x19y/Screenshot-20251027-163054-Drive.jpg"
+
+                        },
+      {
+
+                            id: 3,
+
+                            title:" المحاضرة 2 الصرف الميزان الصرفي prof amani",
+
+                            description: "المدرسة العليا للأساتذة استاذ تعليم ابتدائي اللغة العربية النظام الجديد", 
+
+                            downloads: 972,
+
+                            views: 2983,
+
+                            driveLink: "https://drive.google.com/drive/folders/11amLEoy_i-sHltN345tBfsdo7qMl-KNu",
+
+                            image: "https://i.ibb.co/PGMf8hhK/Screenshot-20251027-132037-Chrome.jpg"
+
+                        },                 {
+
+                            id: 4,
+
+                            title:"الميزان الصرفيprof fares",
+
+                            description: "المدرسة العليا للأساتذة استاذ تعليم ابتدائي اللغة العربية النظام الجديد", 
+
+                            downloads: 234,
+
+                            views: 12338,
+
+                            driveLink: "https://drive.google.com/drive/folders/1FO5pxuDEvTxYQgZEXikhtV-iGHmRl6KP",
+
+                            image: "https://i.ibb.co/tTHH9Wm0/Screenshot-20251027-132059-Chrome.jpg"
+
+                        },
+                      {
+
+                            id: 5,
+
+                            title:" الفرق بين الصرف والنحو",
+
+                            description: "المدرسة العليا للأساتذة استاذ تعليم ابتدائي اللغة العربية النظام الجديد", 
+
+                            downloads: 344,
+
+                            views: 9894,
+
+                            driveLink: "https://drive.google.com/drive/folders/1UXtYNE2BP4Y8PZV1tQcOxGQcfWnkko_Y",
+
+                            image: "https://i.ibb.co/2YNzSLCG/Screenshot-20251027-132116-Chrome.jpg"
+
+                        },
+
+                    ],
+
+                    exercises: [
+
+                     
+                     
+
+                    ],
+
+                    tests: [
+
+                     
+                        
+
+                    ]
+
+                },
+
+                semester2: {
+
+                    lessons: [
+
+                       
+                      
+
+                    ],
+
+                    exercises: [
+
+                       
+
+                    ],
+
+                    tests: [
+
+                       
+                        
+
+                    ]
+
+                }
+
+            },
+       
+           arabic: {
+
+                semester1: {
+
+                    lessons: [
+
+                        {
+
+                            id: 1,
+
+                            title:"برنامج الادب العربي قديما وحديثا prof fares",
+
+                            description: "أستاذ تعليم إبتدائي اللغة العربية النظام الجديد", 
+
+                            downloads: 938,
+
+                            views: 2977,
+
+                            driveLink: "https://drive.google.com/drive/folders/1cfElI4scynA9Rgp0eLDgFoaeccmPE7wq",
+
+                            image: "https://i.ibb.co/Csbbf4HZ/Screenshot-20251027-131740-Chrome.jpg"
+
+                        },
+{
+
+                            id: 2,
+
+                            title:" المحاضرة الاولى الادب العربي قبل ظهور النحو",
+
+                            description: "المدرسة العليا للأساتذة استاذ تعليم ابتدائي اللغة العربية النظام الجديد", 
+
+                            downloads: 346,
+
+                            views: 3784,
+
+                            driveLink: "https://drive.google.com/drive/folders/1wQtqV19TPDQG8UvVphVQuuGyqigkSSVz",
+
+                            image: "https://i.ibb.co/xSkD6WJL/Screenshot-20251027-131835-Chrome.jpg"
+
+                        },
+                       
+
+                    ],
+
+                    exercises: [
+
+                      
+                     
+
+                    ],
+
+                    tests: [
+
+                        
+
+                    ]
+
+                },
+
+                semester2: {
+
+                    lessons: [
+
+                       
+                      
+
+                    ],
+
+                    exercises: [
+
+                       
+
+                    ],
+
+                    tests: [
+
+                       
+                        
+
+                    ]
+
+                }
+
+            },
+          
+         mechanics : {
+
+                semester1: {
+
+                    lessons: [
+{
+
+                            id: 1,
+
+                            title:"درس شامل المقادير الفيزيائية prof fares",
+
+                            description: "المدرسة العليا للأساتذة استاذ تعليم ابتدائي اللغة العربية النظام الجديد", 
+
+                            downloads: 452,
+
+                            views: 22998,
+
+                            driveLink: "https://drive.google.com/drive/folders/1SspFXoKzldNU9wWM_MsMWZX_h526ObvL",
+
+                            image: "https://i.ibb.co/3mH9tZZ6/Screenshot-20251028-161748-Drive.jpg"
+
+                        },
+                        {
+
+                            id:  2,
+
+                            title:"درس الحساب الشعاعي prof fares",
+
+                            description: "المدرسة العليا للأساتذة استاذ تعليم ابتدائي اللغة العربية النظام الجديد", 
+
+                            downloads: 872,
+
+                            views: 8094,
+
+                            driveLink: "https://drive.google.com/drive/folders/1th9cDsS1L9weFKFuiZlJpXhS33rjy0bp",
+
+                            image: "https://i.ibb.co/vx0cFL1L/Screenshot-20251028-161714-Drive.jpg"
+
+                        },
+
+                       
+
+                    ],
+                  exercises: [
+
+                      {
+
+                            id: 1,
+
+                            title:"سلسلة تمارين في التحليل البعدي prof amani",
+
+                            description: "المدرسة العليا للأساتذة استاذ تعليم ابتدائي اللغة العربية النظام الجديد", 
+
+                            downloads: 982,
+
+                            views: 2294,
+
+                            driveLink: "https://drive.google.com/drive/folders/1ngu0lVJR_qavaLLm8bMfZIKY9C-KXmNb",
+
+                            image: "https://i.ibb.co/1YY9nq96/Screenshot-20251028-162131-Drive.jpg"
+
+                        },
+{
+
+                            id: 2,
+
+                            title:"6 تمارين مع الحل في التحليل الشعاعي prof amani",
+
+                            description: "المدرسة العليا للأساتذة استاذ تعليم ابتدائي اللغة العربية النظام الجديد", 
+
+                            downloads: 972,
+
+                            views: 2294,
+
+                            driveLink: "https://drive.google.com/drive/folders/1_89PwwWk6OLtVJTW2DtoK96JCAM40lxP",
+
+                            image: "https://i.ibb.co/Nn3qYzK1/Screenshot-20251028-162251-Drive.jpg"
+
+                        },
+
+                     
+
+                    ],
+
+                    tests: [
+
+                      
+
+                        
+
+                    ]
+
+                },
+           
+           semester2: {
+
+                    lessons: [
+
+                       
+
+                      
+
+                    ],
+
+                    exercises: [
+
+                       
+
+                    ],
+
+                    tests: [
+
+                       
+
+                        
+
+                    ]
+
+                }
+
+            },
+       
+           islamic: {
+
+                semester1: {
+
+                    lessons: [
+{
+
+                            id: 1,
+
+                            title:"برنامج التربية الاسلامية prof amani",
+
+                            description: "المدرسة العليا للأساتذة استاذ تعليم ابتدائي اللغة العربية النظام الجديد", 
+
+                            downloads: 972,
+
+                            views: 9894,
+
+                            driveLink: "https://drive.google.com/drive/folders/1MXuT74nMjJynQspeJHeASa6k10dHxpV-",
+
+                            image: "https://i.ibb.co/N6pQB6gv/Screenshot-20251028-163443-Chrome.jpg"
+
+                        },
+{
+
+                            id: 2,
+
+                            title:"المحاضرة الاولى في التربية الاسلاميةprof fares",
+
+                            description: "المدرسة العليا للأساتذة استاذ تعليم ابتدائي اللغة العربية النظام الجديد", 
+
+                            downloads: 992,
+
+                            views: 9294,
+
+                            driveLink: "https://drive.google.com/drive/folders/1zj_2hsxkNmtywsnIgcDafEz1YqXLbEnf",
+
+                            image: "https://i.ibb.co/GvbfzNVr/Screenshot-20251028-163535-Drive.jpg"
+
+                        },
+
+                        
+
+                       
+
+                    ],
+
+                    exercises: [
+
+                      
+
+                     
+
+                    ],
+
+                    tests: [
+
+                      
+
+                        
+
+                    ]
+
+                },
+
+                semester2: {
+
+                    lessons: [
+
+                       
+                      
+
+                    ],
+
+                    exercises: [
+
+                       
+
+                    ],
+
+                    tests: [
+
+                       
+                        
+
+                    ]
+
+                }
+
+            },
+       
+          
+       chemistry: {
+
+                semester1: {
+
+                    lessons: [
+
+                        
+                       
+
+                    ],
+
+                    exercises: [
+
+                      {
+
+                            id: 1,
+
+                            title:"سلسلة تمارين في الكيمياء prof fares",
+
+                            description: "المدرسة العليا للأساتذة استاذ تعليم ابتدائي اللغة العربية النظام الجديد", 
+
+                            downloads: 772,
+
+                            views: 8294,
+
+                            driveLink: "https://drive.google.com/drive/folders/1yBTwvV6kApA0-p66yg_uj_JiT385nc58",
+
+                            image: "https://i.ibb.co/JwxRfMZS/Screenshot-20251028-163251-Chrome.jpg"
+
+                        },
+
+                     
+
+                    ],
+
+                    tests: [
+
+                      
+
+                        
+
+                    ]
+
+                },
+
+                semester2: {
+
+                    lessons: [
+
+                       
+                      
+
+                    ],
+
+                    exercises: [
+
+                       
+
+                    ],
+
+                    tests: [
+
+                       
+                        
+
+                    ]
+
+                }
+
+            
+ 
+
+                           
+                         
+
+              
+       
+                       
+
+           
+
+            }
+        };
+
+        // أسماء المواد بالعربية
+        const subjectNames = {
+
+            math: "الرياضيات",
+
+            mechanics: "الميكانيك", 
+
+            chemistry: "بنية المادة",
+
+            islamic: "التربية الإسلامية",
+
+            english: "اللغة الإنجليزية",
+
+            arabic: " الادب العربي قديما وحديثا ",
+
+            sarf: "الصرف",
+
+            imla: "الإملاء",
+
+            balagha: "علم البلاغة",
+
+            taabir: "فنيات الكتابة و التعبير",
+
+            technology: "تكنولوجيا الإعلام والاتصال"
+
+        };
+
+        // أسماء أنواع المحتوى بالعربية
+
+        const contentTypeNames = {
+
+            lessons: "الدروس",
+
+            exercises: "التمارين",
+
+            tests: "الاختبارات"
+
+        };
+
+        // المتغيرات لتخزين الاختيارات الحالية
+
+        let currentSubject = null;
+
+        let currentSemester = null;
+
+        let currentContentType = null;
+
+        // التحقق من حالة تسجيل الدخول عند تحميل الصفحة
+
+        document.addEventListener('DOMContentLoaded', function() {
+
+            checkLoginStatus();
+
+            
+
+            // إضافة مستمعي الأحداث للأزرار
+
+            document.getElementById('login-btn').addEventListener('click', function(e) {
+
+                e.preventDefault();
+
+                showModal('login-modal');
+
+            });
+
+            
+
+            document.getElementById('signup-btn').addEventListener('click', function(e) {
+
+                e.preventDefault();
+
+                showModal('signup-modal');
+
+            });
+
+            
+
+            document.getElementById('logout-btn').addEventListener('click', function(e) {
+
+                e.preventDefault();
+
+                handleLogout();
+
+            });
+
+            
+
+            // إغلاق النماذج
+
+            document.querySelectorAll('.close-modal').forEach(button => {
+
+                button.addEventListener('click', function() {
+
+                    hideModals();
+
+                });
+
+            });
+
+            
+
+            // إغلاق النماذج عند النقر خارجها
+
+            document.querySelectorAll('.modal, .semester-modal, .content-type-modal, .content-modal').forEach(modal => {
+
+                modal.addEventListener('click', function(e) {
+
+                    if (e.target === modal) {
+
+                        hideModals();
+
+                    }
+
+                });
+
+            });
+
+            
+
+            // معالجة النماذج
+
+            document.getElementById('login-form').addEventListener('submit', handleLogin);
+
+            document.getElementById('signup-form').addEventListener('submit', handleSignup);
+
+            
+
+            // إضافة مستمعي الأحداث للروابط والمواد
+
+            document.getElementById('start-learning-btn').addEventListener('click', function(e) {
+
+                if (!isLoggedIn()) {
+
+                    e.preventDefault();
+
+                    showModal('login-modal');
+
+                    showAlert('login-alert', 'يجب تسجيل الدخول للوصول إلى المواد التعليمية.', 'error');
+
+                }
+
+            });
+
+            
+
+            document.getElementById('watch-video-btn').addEventListener('click', function(e) {
+
+                if (!isLoggedIn()) {
+
+                    e.preventDefault();
+
+                    showModal('login-modal');
+
+                    showAlert('login-alert', 'يجب تسجيل الدخول لمشاهدة الفيديو التعريفي.', 'error');
+
+                }
+
+            });
+
+            
+
+            // إضافة مستمعي الأحداث لبطاقات المواد
+
+            document.querySelectorAll('.subject-card').forEach(card => {
+
+                card.addEventListener('click', function() {
+
+                    currentSubject = this.getAttribute('data-subject');
+
+                    if (!isLoggedIn()) {
+
+                        showModal('login-modal');
+
+                        showAlert('login-alert', 'يجب تسجيل الدخول للوصول إلى محتوى هذه المادة.', 'error');
+
+                    } else {
+
+                        showSemesterModal(currentSubject);
+
+                    }
+
+                });
+
+            });
+
+            
+
+            // إضافة مستمع حدث للبحث
+
+            document.getElementById('search-btn').addEventListener('click', function() {
+
+                const searchTerm = document.getElementById('search-content').value.toLowerCase();
+
+                filterContent(currentSubject, currentSemester, currentContentType, searchTerm);
+
+            });
+
+            
+
+            document.getElementById('search-content').addEventListener('input', function() {
+
+                const searchTerm = this.value.toLowerCase();
+
+                filterContent(currentSubject, currentSemester, currentContentType, searchTerm);
+
+            });
+
+            
+
+            // إضافة مستمعي الأحداث لاختيار السداسي
+
+            document.querySelectorAll('.semester-card').forEach(card => {
+
+                card.addEventListener('click', function() {
+
+                    document.querySelectorAll('.semester-card').forEach(c => c.classList.remove('selected'));
+
+                    this.classList.add('selected');
+
+                    currentSemester = this.getAttribute('data-semester');
+
+                });
+
+            });
+
+            
+
+            document.getElementById('confirm-semester').addEventListener('click', function() {
+
+                if (currentSemester) {
+
+                    hideModals();
+
+                    showContentTypeModal(currentSubject, currentSemester);
+
+                } else {
+
+                    alert('يرجى اختيار السداسي أولاً');
+
+                }
+
+            });
+
+            
+
+            // إضافة مستمعي الأحداث لاختيار نوع المحتوى
+
+            document.querySelectorAll('.content-type-card').forEach(card => {
+
+                card.addEventListener('click', function() {
+
+                    document.querySelectorAll('.content-type-card').forEach(c => c.classList.remove('selected'));
+
+                    this.classList.add('selected');
+
+                    currentContentType = this.getAttribute('data-content-type');
+
+                    // فتح المحتوى مباشرة بعد الاختيار
+
+                    hideModals();
+
+                    showContent(currentSubject, currentSemester, currentContentType);
+
+                });
+
+            });
+
+        });
+
+        
+
+        // التحقق مما إذا كان المستخدم مسجل الدخول
+
+        function isLoggedIn() {
+
+            return localStorage.getItem('currentUser') !== null;
+
+        }
+
+        
+
+        // التحقق من حالة تسجيل الدخول وعرض المحتوى المناسب
+
+        function checkLoginStatus() {
+
+            if (isLoggedIn()) {
+
+                showMemberContent();
+
+            } else {
+
+                showGuestContent();
+
+            }
+
+        }
+
+        
+
+        // عرض محتوى الضيف
+
+        function showGuestContent() {
+
+            document.getElementById('guest-actions').style.display = 'flex';
+
+            document.getElementById('user-actions').style.display = 'none';
+
+            document.getElementById('member-content').style.display = 'none';
+
+        }
+
+        
+
+        // عرض محتوى العضو
+
+        function showMemberContent() {
+
+            document.getElementById('guest-actions').style.display = 'none';
+
+            document.getElementById('user-actions').style.display = 'flex';
+
+            document.getElementById('member-content').style.display = 'block';
+
+        }
+
+        
+
+        // عرض نافذة منبثقة
+
+        function showModal(modalId) {
+
+            document.getElementById(modalId).style.display = 'flex';
+
+        }
+
+        
+
+        // إخفاء جميع النوافذ المنبثقة
+
+        function hideModals() {
+
+            document.querySelectorAll('.modal, .semester-modal, .content-type-modal, .content-modal').forEach(modal => {
+
+                modal.style.display = 'none';
+
+            });
+
+        }
+
+        
+
+        // معالجة تسجيل الدخول
+
+        function handleLogin(e) {
+
+            e.preventDefault();
+
+            
+
+            const email = document.getElementById('login-email').value;
+
+            const password = document.getElementById('login-password').value;
+
+            
+
+            // التحقق من صحة كلمة المرور (يجب أن تكون 4 أرقام)
+
+            if (!/^\d{4}$/.test(password)) {
+
+                showAlert('login-alert', 'كلمة المرور يجب أن تتكون من 4 أرقام فقط.', 'error');
+
+                return;
+
+            }
+
+            
+
+            // البحث عن المستخدم في التخزين المحلي
+
+            const users = JSON.parse(localStorage.getItem('users') || '[]');
+
+            const user = users.find(u => u.email === email && u.password === password);
+
+            
+
+            if (user) {
+
+                // حفظ حالة تسجيل الدخول
+
+                localStorage.setItem('currentUser', JSON.stringify(user));
+
+                showMemberContent();
+
+                hideModals();
+
+            } else {
+
+                showAlert('login-alert', 'البريد الإلكتروني أو كلمة المرور غير صحيحة.', 'error');
+
+            }
+
+        }
+
+        
+
+        // معالجة إنشاء الحساب
+
+        function handleSignup(e) {
+
+            e.preventDefault();
+
+            
+
+            const firstname = document.getElementById('signup-firstname').value;
+
+            const lastname = document.getElementById('signup-lastname').value;
+
+            const email = document.getElementById('signup-email').value;
+
+            const password = document.getElementById('signup-password').value;
+
+            
+
+            // التحقق من صحة كلمة المرور (يجب أن تكون 4 أرقام)
+
+            if (!/^\d{4}$/.test(password)) {
+
+                showAlert('signup-alert', 'كلمة المرور يجب أن تتكون من 4 أرقام فقط.', 'error');
+
+                return;
+
+            }
+
+            
+
+            // الحصول على قائمة المستخدمين من التخزين المحلي
+
+            const users = JSON.parse(localStorage.getItem('users') || '[]');
+
+            
+
+            // التحقق مما إذا كان البريد الإلكتروني مستخدمًا مسبقًا
+
+            if (users.some(user => user.email === email)) {
+
+                showAlert('signup-alert', 'هذا البريد الإلكتروني مستخدم مسبقًا.', 'error');
+
+                return;
+
+            }
+
+            
+
+            // إنشاء مستخدم جديد
+
+            const newUser = {
+
+                firstname,
+
+                lastname,
+
+                email,
+
+                password
+
+            };
+
+            
+
+            // إضافة المستخدم الجديد إلى القائمة
+
+            users.push(newUser);
+
+            localStorage.setItem('users', JSON.stringify(users));
+
+            
+
+            // تسجيل الدخول تلقائيًا بعد إنشاء الحساب
+
+            localStorage.setItem('currentUser', JSON.stringify(newUser));
+
+            showMemberContent();
+
+            hideModals();
+
+        }
+
+        
+
+        // معالجة تسجيل الخروج
+
+        function handleLogout() {
+
+            localStorage.removeItem('currentUser');
+
+            showGuestContent();
+
+            
+
+            // مسح حقول النماذج
+
+            document.getElementById('login-form').reset();
+
+            document.getElementById('signup-form').reset();
+
+        }
+
+        
+
+        // عرض رسائل التنبيه
+
+        function showAlert(containerId, message, type) {
+
+            const alertContainer = document.getElementById(containerId);
+
+            alertContainer.textContent = message;
+
+            alertContainer.style.display = 'block';
+
+            alertContainer.className = `alert alert-${type}`;
+
+            
+
+            // إخفاء التنبيه بعد 5 ثوانٍ
+
+            setTimeout(() => {
+
+                alertContainer.style.display = 'none';
+
+            }, 5000);
+
+        }
+
+        
+
+        // عرض نافذة اختيار السداسي
+
+        function showSemesterModal(subject) {
+
+            const subjectName = subjectNames[subject];
+
+            document.getElementById('semester-title').textContent = `اختر السداسي - ${subjectName}`;
+
+            document.querySelectorAll('.semester-card').forEach(card => card.classList.remove('selected'));
+
+            currentSemester = null;
+
+            showModal('semester-modal');
+
+        }
+
+        
+
+        // عرض نافذة اختيار نوع المحتوى
+
+        function showContentTypeModal(subject, semester) {
+
+            const subjectName = subjectNames[subject];
+
+            const semesterName = semester === '1' ? 'الأول' : 'الثاني';
+
+            document.getElementById('content-type-title').textContent = `اختر نوع المحتوى - ${subjectName} - السداسي ${semesterName}`;
+
+            document.querySelectorAll('.content-type-card').forEach(card => card.classList.remove('selected'));
+
+            currentContentType = null;
+
+            showModal('content-type-modal');
+
+        }
+
+        
+
+        // عرض محتوى المادة حسب السداسي ونوع المحتوى
+
+        function showContent(subject, semester, contentType) {
+
+            const subjectName = subjectNames[subject];
+
+            const semesterName = semester === '1' ? 'الأول' : 'الثاني';
+
+            const contentTypeName = contentTypeNames[contentType];
+
+            
+
+            document.getElementById('content-title').textContent = `${contentTypeName} - ${subjectName} - السداسي ${semesterName}`;
+
+            document.getElementById('search-content').value = '';
+
+            
+
+            const contentGrid = document.getElementById('content-grid');
+
+            contentGrid.innerHTML = '';
+
+            
+
+            // الحصول على البيانات المناسبة
+
+            let content = [];
+
+            if (contentData[subject] && contentData[subject][`semester${semester}`]) {
+
+                content = contentData[subject][`semester${semester}`][contentType] || [];
+
+            }
+
+            
+
+            if (!content || content.length === 0) {
+
+                contentGrid.innerHTML = '<div style="text-align: center; padding: 20px; color: var(--text-light);">لا توجد محتويات متاحة لهذا النوع حالياً.</div>';
+
+                document.getElementById('content-modal').style.display = 'flex';
+
+                return;
+
+            }
+
+            
+
+            content.forEach(item => {
+
+                const contentCard = document.createElement('div');
+
+                contentCard.className = 'content-card-modal';
+
+                contentCard.innerHTML = `
+
+                    <img src="${item.image}" alt="${item.title}" class="content-image">
+
+                    <div class="content-card-body">
+
+                        <div class="content-header-modal">
+
+                            <div class="content-title">${item.title}</div>
+
+                            <div class="content-duration">${item.duration || ''}</div>
+
+                        </div>
+
+                        <div class="content-description">${item.description}</div>
+
+                        <div class="content-actions">
+
+                            <div class="content-info">
+
+                                <span><i class="fas fa-download"></i> ${item.downloads} تحميل</span>
+
+                                <span><i class="fas fa-eye"></i> ${item.views} مشاهدة</span>
+
+                            </div>
+
+                            <button class="download-btn" data-content-id="${item.id}" data-subject="${subject}" data-semester="${semester}" data-content-type="${contentType}">
+
+                                <i class="fas fa-download"></i> تحميل
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                `;
+
+                contentGrid.appendChild(contentCard);
+
+            });
+
+            
+
+            // إضافة مستمعي الأحداث لأزرار التحميل
+
+            document.querySelectorAll('.download-btn').forEach(button => {
+
+                button.addEventListener('click', function() {
+
+                    const contentId = this.getAttribute('data-content-id');
+
+                    const subject = this.getAttribute('data-subject');
+
+                    const semester = this.getAttribute('data-semester');
+
+                    const contentType = this.getAttribute('data-content-type');
+
+                    downloadContent(subject, semester, contentType, contentId);
+
+                });
+
+            });
+
+            
+
+            // عرض نافذة المحتوى
+
+            document.getElementById('content-modal').style.display = 'flex';
+
+        }
+
+        
+
+        // تصفية المحتوى حسب البحث
+
+        function filterContent(subject, semester, contentType, searchTerm) {
+
+            let content = [];
+
+            if (contentData[subject] && contentData[subject][`semester${semester}`]) {
+
+                content = contentData[subject][`semester${semester}`][contentType] || [];
+
+            }
+
+            
+
+            const filteredContent = searchTerm 
+
+                ? content.filter(item => 
+
+                    item.title.toLowerCase().includes(searchTerm) || 
+
+                    (item.description && item.description.toLowerCase().includes(searchTerm)))
+
+                : content;
+
+            
+
+            const contentGrid = document.getElementById('content-grid');
+
+            contentGrid.innerHTML = '';
+
+            
+
+            if (filteredContent.length === 0) {
+
+                contentGrid.innerHTML = '<div style="text-align: center; padding: 20px; color: var(--text-light);">لا توجد نتائج للبحث</div>';
+
+                return;
+
+            }
+
+            
+
+            filteredContent.forEach(item => {
+
+                const contentCard = document.createElement('div');
+
+                contentCard.className = 'content-card-modal';
+
+                contentCard.innerHTML = `
+
+                    <img src="${item.image}" alt="${item.title}" class="content-image">
+
+                    <div class="content-card-body">
+
+                        <div class="content-header-modal">
+
+                            <div class="content-title">${item.title}</div>
+
+                            <div class="content-duration">${item.duration || ''}</div>
+
+                        </div>
+
+                        <div class="content-description">${item.description}</div>
+
+                        <div class="content-actions">
+
+                            <div class="content-info">
+
+                                <span><i class="fas fa-download"></i> ${item.downloads} تحميل</span>
+
+                                <span><i class="fas fa-eye"></i> ${item.views} مشاهدة</span>
+
+                            </div>
+
+                            <button class="download-btn" data-content-id="${item.id}" data-subject="${subject}" data-semester="${semester}" data-content-type="${contentType}">
+
+                                <i class="fas fa-download"></i> تحميل
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                `;
+
+                contentGrid.appendChild(contentCard);
+
+            });
+
+            
+
+            // إعادة إضافة مستمعي الأحداث لأزرار التحميل
+
+            document.querySelectorAll('.download-btn').forEach(button => {
+
+                button.addEventListener('click', function() {
+
+                    const contentId = this.getAttribute('data-content-id');
+
+                    const subject = this.getAttribute('data-subject');
+
+                    const semester = this.getAttribute('data-semester');
+
+                    const contentType = this.getAttribute('data-content-type');
+
+                    downloadContent(subject, semester, contentType, contentId);
+
+                });
+
+            });
+
+        }
+
+        
+
+        // تحميل المحتوى من Google Drive
+
+        function downloadContent(subject, semester, contentType, contentId) {
+
+            let content = [];
+
+            if (contentData[subject] && contentData[subject][`semester${semester}`]) {
+
+                content = contentData[subject][`semester${semester}`][contentType] || [];
+
+            }
+
+            
+
+            const item = content.find(l => l.id == contentId);
+
+            
+
+            if (item && item.driveLink) {
+
+                // فتح رابط التحميل في نافذة جديدة
+
+                window.open(item.driveLink, '_blank');
+
+                
+
+                // زيادة عداد التحميلات
+
+                item.downloads += 1;
+
+                
+
+                // تحديث العروض
+
+                const downloadBtn = document.querySelector(`.download-btn[data-content-id="${contentId}"][data-subject="${subject}"][data-semester="${semester}"][data-content-type="${contentType}"]`);
+
+                if (downloadBtn) {
+
+                    const contentInfo = downloadBtn.parentElement.querySelector('.content-info');
+
+                    const downloadSpan = contentInfo.querySelector('span:first-child');
+
+                    downloadSpan.innerHTML = `<i class="fas fa-download"></i> ${item.downloads} تحميل`;
+
+                }
+
+            } else {
+
+                alert('رابط التحميل غير متوفر حالياً.');
+
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>
